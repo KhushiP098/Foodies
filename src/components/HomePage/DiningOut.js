@@ -43,11 +43,11 @@ const DiningOut = () => {
       <p className='text-3xl font-semibold mt-5'>Collections</p>
       <p className='xl:text-xl mt-8 mb-8 text-sm'>Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends<span>All collections in Delhi NCR</span></p>
 
-     <div className='flex xl:flex-row flex-col gap-5'>
+     <div className='flex flex-row flex-wrap justify-center items-center  gap-5'>
        {
         data.map((item)=>(
           <div className='flex flex-col gap-5'>
-            <div className='xl:w-[270px] xl:h-[320px]  w-[200px] h-[250px]  relative'>
+            <div className='xl:w-[250px] xl:h-[300px] lg:w-[200px] lg:h-[250px]  w-[150px] h-[200px]   relative'>
               <img src={item.img} className='w-full rounded-xl h-full'/>
               <p className='absolute text-white font-semibold bottom-8 left-2 '>{item.para}</p>
               <p className='absolute text-white font-semibold bottom-2 left-2 flex items-center '>{item.places}<span><BiSolidRightArrow className='text-white'/></span></p>
@@ -59,7 +59,7 @@ const DiningOut = () => {
        }
      </div>
 
-     <div className='flex xl:flex-row flex-col gap-5 items-center text-black/40 justify-start mt-14 mb-5'>
+     <div className='flex sm:flex-row flex-wrap  gap-5 items-center text-black/40 sm:justify-start justify-center mt-14 mb-5'>
 
       <div className='flex items-center p-2  rounded-xl border-black/25 border'><span><HiMiniAdjustmentsHorizontal/></span>Filters</div>
       <div className='flex items-center p-2 rounded-xl border-black/25 border'><span><MdOutlineKeyboardArrowDown /></span>Pro Offers</div>
@@ -72,7 +72,7 @@ const DiningOut = () => {
 
      <p className='m-10 text-3xl font-semibold'>Dine-Out Restaurants in Bangalore</p>
 
-     <div className='grid  xl:grid-cols-3 grid-cols-1 xl:w-[1180px] items-center justify-center gap-2 '>
+     <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center justify-center gap-2 '>
             {
               DiningOutData.map((item)=>(
                <Card2 item={item} key={item.id}/>

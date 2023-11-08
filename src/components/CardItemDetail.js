@@ -33,16 +33,16 @@ const CardItemDetail = ({item}) => {
 
 
   return (
-    <div className='xl:w-[1080px] w-[80vw] flex flex-col justify-center items-center m-4  p-5 border rounded-xl hover:scale-105 transition-all duration-200 shadow-xl ' >
+    <div className=' w-[80vw] flex justify-center items-center p-5 border rounded-xl hover:scale-105 transition-all duration-200 shadow-xl ' >
 
-        <div className=' flex flex-col items-center justify-center xl:flex-row xl:gap-10 '>
-            <div className='xl:h-[300px] xl:w-[300px] h-[200px] w-[200px]'>
+        <div className=' flex flex-col items-center justify-center sm:flex-row xl:gap-10 '>
+            <div className='xl:h-[300px] xl:w-[300px] lg:h-[200px] lg:w-[200px]  h-[150px] w-[150px]'>
                 <img src={item.imgdata} className='h-full w-full'/>
             </div>
 
-            <div className='flex flex-col justify-center items-center text-lg xl:w-[500px] gap-5'>
-                <p className='text-2xl font-bold'>Restaurant:<span className='font-normal '>{item.rname}</span></p>
-                <div className='grid xl:grid-cols-2  grid-cols-1 gap-3'>
+            <div className='flex flex-col justify-center items-center text-sm m-5 gap-5'>
+                <p className='text-lg font-bold'>Restaurant:<span className='font-normal '>{item.rname}</span></p>
+                <div className='grid lg:grid-cols-2  grid-cols-1 gap-3'>
                     <p className='font-bold'>Price:<span className='font-normal' >{item.price} </span></p>
                     <p className='font-bold items-center flex '>Rating:<span className='bg-green-500 p-1 m-1 text-white rounded-md flex items-center'>{item.rating}<AiFillStar className='text-white '/></span></p>
                     <p className='font-bold'>Dishes:<span className='font-normal'>{item.address}</span></p>

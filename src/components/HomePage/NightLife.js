@@ -42,18 +42,18 @@ const NightLife = () => {
 
     <Header/>
 
-    <div className='xl:w-[1080px] flex flex-col xl:items-start justify-center items-center '>
+    <div className='flex flex-col justify-center items-center '>
 
 <p className='text-3xl font-semibold mt-5'>Collections</p>
 <p className='xl:text-xl mt-8 mb-8 text-sm '>Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends<span>All collections in Delhi NCR</span></p>
 
 
 {/* cards */}
-<div className='flex xl:flex-row flex-col items-center justify-center gap-5'>
+<div className='flex flex-row  flex-wrap xl:w-[250px] xl:h-[300px] lg:w-[200px] lg:h-[250px]  w-[150px] h-[200px] gap-5'>
  {
   data.map((item)=>(
-    <div className='flex flex-col gap-5'>
-      <div className='xl:w-[270px] xl:h-[320px] w-[200px] h-[250px] relative'>
+    <div className='flex flex-col gap-5 p-2 m-2'>
+      <div className='xl:w-[250px] xl:h-[300px] lg:w-[200px] lg:h-[250px]  w-[150px] h-[200px] relative'>
         <img src={item.img} className='w-full rounded-xl h-full'/>
         <p className='absolute text-white font-semibold bottom-8 left-2 '>{item.para}</p>
         <p className='absolute text-white font-semibold bottom-2 left-2 flex items-center '>{item.places}<span><BiSolidRightArrow className='text-white'/></span></p>
@@ -66,13 +66,13 @@ const NightLife = () => {
 </div>
 
 {/* button section */}
-<div className='flex flex-col xl:flex-row gap-5 items-center text-black/40 justify-start mt-14 mb-5'>
+<div className='flex w-full flex-wrap sm:flex-row gap-5 items-center text-black/40 sm:justify-start justify-center mt-14 mb-5  p-4 m-2'>
 
-<div className='flex items-center p-2  rounded-xl border-black/25 border'><span><HiMiniAdjustmentsHorizontal/></span>Filters</div>
-<div className='flex items-center p-2 rounded-xl border-black/25 border'><span><MdOutlineKeyboardArrowDown /></span>Pro Offers</div>
-<div className='flex items-center p-2 rounded-xl border-black/25 border'><span><CiSliderVertical/></span>Distance</div>
-<div className=' p-2 rounded-xl border-black/25 border'>Rating: 4.0+</div>
-<div className=' p-2 rounded-xl border-black/25 border'>Pubs & Bars</div>
+<div className='flex items-center p-2 bg-white rounded-xl border-black/25 border'><span><HiMiniAdjustmentsHorizontal/></span>Filters</div>
+<div className='flex items-center p-2 bg-white  rounded-xl border-black/25 border'><span><MdOutlineKeyboardArrowDown /></span>Pro Offers</div>
+<div className='flex items-center p-2 bg-white rounded-xl border-black/25 border'><span><CiSliderVertical/></span>Distance</div>
+<div className=' p-2 rounded-xl bg-white  border-black/25 border'>Rating: 4.0+</div>
+<div className=' p-2 rounded-xl bg-white  border-black/25 border'>Pubs & Bars</div>
 
 
 </div>
@@ -81,7 +81,7 @@ const NightLife = () => {
 <p className='m-10 text-3xl  font-semibold'>Nightlife Restaurants in Bangalore</p>
 
 {/* cards-2*/}
-<div className='grid xl:grid-cols-3 grid-cols-1 xl:w-[1180px] items-center justify-center gap-2 '>
+<div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1  items-center justify-center gap-2 '>
       {
         NightLifeData.map((item)=>(
          <Card2 item={item} key={item.id}/>

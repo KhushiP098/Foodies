@@ -8,7 +8,7 @@ const Menu = () => {
   return (
     <div className='flex justify-center items-center m-5 flex-col'>
       <p className=' font-semibold font-serif text-3xl'>Eat what makes You happy</p>
-      <div className='grid grid-cols-1 grid-rows-33 xl:grid-cols-3 xl:grid-rows-3 gap-10 m-10 ' >
+      <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 m-10 ' >
        {
         data.map((item)=>(
           <Cards key={item.id} item={item} />
