@@ -43,17 +43,15 @@ const DiningOut = () => {
       <p className='text-3xl font-semibold mt-5'>Collections</p>
       <p className='xl:text-xl mt-8 mb-8 text-sm'>Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends<span>All collections in Delhi NCR</span></p>
 
-     <div className='flex flex-row flex-wrap justify-center items-center  gap-5'>
+     <div className='flex flex-row justify-center flex-wrap '>
        {
         data.map((item)=>(
-          <div className='flex flex-col gap-5'>
-            <div className='xl:w-[250px] xl:h-[300px] lg:w-[200px] lg:h-[250px]  w-[150px] h-[200px]   relative'>
+          <div className='flex flex-col gap-5  p-2 m-2'>
+            <div className='xl:w-[250px] xl:h-[300px] lg:w-[200px] lg:h-[250px]  w-[150px] h-[200px] relative'>
               <img src={item.img} className='w-full rounded-xl h-full'/>
               <p className='absolute text-white font-semibold bottom-8 left-2 '>{item.para}</p>
               <p className='absolute text-white font-semibold bottom-2 left-2 flex items-center '>{item.places}<span><BiSolidRightArrow className='text-white'/></span></p>
             </div>
-            
-            
           </div>  
         ))
        }
@@ -79,10 +77,8 @@ const DiningOut = () => {
               ))
             }
 
-          </div> 
-      
+      </div> 
     </div>
-
     </div>  
     
   )

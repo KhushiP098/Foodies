@@ -49,7 +49,7 @@ const NightLife = () => {
 
 
 {/* cards */}
-<div className='flex flex-row  flex-wrap xl:w-[250px] xl:h-[300px] lg:w-[200px] lg:h-[250px]  w-[150px] h-[200px] gap-5'>
+<div className='flex flex-row justify-center flex-wrap'>
  {
   data.map((item)=>(
     <div className='flex flex-col gap-5 p-2 m-2'>
@@ -58,8 +58,6 @@ const NightLife = () => {
         <p className='absolute text-white font-semibold bottom-8 left-2 '>{item.para}</p>
         <p className='absolute text-white font-semibold bottom-2 left-2 flex items-center '>{item.places}<span><BiSolidRightArrow className='text-white'/></span></p>
       </div>
-      
-      
     </div>  
   ))
  }
@@ -89,9 +87,7 @@ const NightLife = () => {
       }
 
     </div> 
-
     </div>
-
     </div>
    
   )
